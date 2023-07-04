@@ -1,5 +1,7 @@
 # ![icons8-netapp-cute-color-32](https://github.com/dlamkins/NetApp-APITest-Wrapper/assets/1950594/2d4b92a5-d536-4a52-881b-923001520b06) NetApp / ONTAP APITest Wrapper
 
+## Download: https://github.com/dlamkins/NetApp-ONTAP-APITest-Wrapper/releases/latest/download/NetApp.APITest.Wrapper.exe
+
 The NetApp APITest Wrapper is an unofficial GUI wrapper for the NetApp apitest application made available in a single binary.  The tool's primary purpose is to aid in troubleshooting API connections with NetApp appliances.  Commands for `system-get-version` and `qtree-list-iter` are available in the dropdown.
 
 | | |
