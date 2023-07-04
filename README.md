@@ -1,4 +1,4 @@
-# ![icons8-netapp-cute-color-32](https://github.com/dlamkins/NetApp-APITest-Wrapper/assets/1950594/2d4b92a5-d536-4a52-881b-923001520b06) NetApp / ONTAP APITest Wrapper
+# ![icons8-netapp-cute-color-32](https://github.com/dlamkins/NetApp-ONTAP-APITest-Wrapper/assets/1950594/f1a896a2-7b50-463d-8da4-85d1004b1e2f) NetApp / ONTAP APITest Wrapper
 
 ## Download: https://github.com/dlamkins/NetApp-ONTAP-APITest-Wrapper/releases/latest/download/NetApp.APITest.Wrapper.exe
 
@@ -6,7 +6,7 @@ The NetApp APITest Wrapper is an unofficial GUI wrapper for the NetApp apitest a
 
 | | |
 |-|-|
-|![image](https://github.com/dlamkins/NetApp-APITest-Wrapper/assets/1950594/ac1d936c-e7cd-4542-a69e-86fa4afbad53)|![image](https://github.com/dlamkins/NetApp-APITest-Wrapper/assets/1950594/ebd9fb61-adb3-4eca-b261-d5baba11589d)|
+|![image](https://github.com/dlamkins/NetApp-ONTAP-APITest-Wrapper/assets/1950594/0f5b49e4-b3e8-4459-9703-e6ee138a1eff)|![image](https://github.com/dlamkins/NetApp-ONTAP-APITest-Wrapper/assets/1950594/c6eb84e9-1766-4766-b548-f28fc16baac8)|
 
 ### What does the tool do?
 
@@ -22,6 +22,17 @@ If you want to use the application, you will need to unblock it.  The tool is li
 ### HTTP fails, but HTTPS succeeds?
 
 v8.6 (or something - I can't quite remember) of ONTAP disables HTTP (80) by default and enforces API calls over HTTPS (443).  You're fine as long as one or the other works (whatever your client is using).  Honestly, in $currentYear you should be using HTTPS regardless.  If you still have HTTP enabled... 😔 consider disabling it.
+
+### Common Error Codes
+
+Shown in the Raw Output you'll see an XML response provided by the apitest tool.  It will indicate an `errorno` and `status="failed"` if there was an issue.
+
+|Code|Error Message|Common Cause|
+|-|-|-|
+|10060|_Can't connect to host (err=10060)._|Nothing appears to be even listening on the port we reached out to - check the IP and that the API is enabled.|
+|13011|_HTTP POST failed_|This likely isn't the correct IP, and you're hitting another system that happens to be hosting a web server.|
+
+_Feel free to suggest updates to this table._
 
 ### Credits
 
